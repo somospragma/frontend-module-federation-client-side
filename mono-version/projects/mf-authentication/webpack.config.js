@@ -1,15 +1,12 @@
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const {
+  withModuleFederationPlugin,
+} = require("@angular-architects/module-federation/webpack");
 
 module.exports = withModuleFederationPlugin({
-
-  name: 'mf-authentication',
+  name: "mf-authentication",
 
   exposes: {
-    './Component': './projects/mf-authentication/src/app/app.component.ts',
+    "./Module":
+      "./projects/mf-authentication/src/app/authentication/authentication.module.ts",
   },
-
-  shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-  },
-
 });

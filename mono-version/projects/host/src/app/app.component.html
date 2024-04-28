@@ -1,6 +1,6 @@
 <div style="text-align: center">
   <nav class="flex justify-content-center">
-    <ul style="list-style: none; display: flex">
+    <ul class="flex" style="list-style: none">
       <li>
         <p-button styleClass="p-button-link" routerLink="/"
           >Page A - Host</p-button
@@ -26,10 +26,12 @@
 
   <h1>{{ title }} with Angular v{{ ngVersion }}</h1>
   <p>PrimeNG v{{ primeNGVersion }}</p>
+
   <button pButton class="mb-4">
     <i class="pi pi-check"></i>
     <span>Test</span>
   </button>
+
   <div class="bc-mt-5" style="border: 5px solid salmon; padding: 1rem">
     <router-outlet></router-outlet>
   </div>

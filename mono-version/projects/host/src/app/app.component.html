@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<div style="text-align: center">
+  <ul style="list-style: none; display: flex">
+    <li>
+      <p-button styleClass="p-button-link" routerLink="/"
+        >Page A - Host</p-button
+      >
+    </li>
+    <li>
+      <p-button styleClass="p-button-link" routerLink="/page-b"
+        >Page B - Host</p-button
+      >
+    </li>
+    <li>
+      <p-button styleClass="p-button-link" routerLink="/authentication/page-c"
+        >Page C - Auth</p-button
+      >
+    </li>
+    <li>
+      <p-button styleClass="p-button-link" routerLink="/authentication/page-d"
+        >Page D - Auth</p-button
+      >
+    </li>
+  </ul>
+
+  <h1>{{ title }} with Angular v{{ ngVersion }}</h1>
+  <p>PrimeNG v{{ primeNGVersion }}</p>
+  <button pButton label="Change theme"></button>
+  <div class="bc-mt-5" style="border: 5px solid salmon; padding: 1rem">
+    <router-outlet></router-outlet>
+  </div>
+</div>

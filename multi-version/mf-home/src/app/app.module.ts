@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { DoBootstrap, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,7 +8,7 @@ import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, MatButtonModule],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {}

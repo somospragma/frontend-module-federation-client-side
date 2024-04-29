@@ -28,6 +28,18 @@ const routes: Routes = [
       elementName: 'mf-auth-root',
     } as WebComponentWrapperOptions,
   },
+  {
+    matcher: startsWith('home'),
+    pathMatch: 'prefix',
+    component: WebComponentWrapper,
+    data: {
+      type: 'module',
+      remoteEntry: 'http://localhost:4202/remoteEntry.js',
+      remoteName: 'mf-home',
+      exposedModule: './web-components',
+      elementName: 'mf-home-root',
+    } as WebComponentWrapperOptions,
+  },
 ];
 
 @NgModule({

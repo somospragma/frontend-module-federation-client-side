@@ -1,5 +1,4 @@
-import { Location } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-page-c',
@@ -8,10 +7,4 @@ import { Component, inject } from '@angular/core';
   templateUrl: './page-c.component.html',
   styleUrls: ['./page-c.component.scss'],
 })
-export class PageCComponent {
-  private readonly location = inject(Location);
-
-  constructor() {
-    console.log('state', this.location.getState());
-  }
-}
+export class PageCComponent {}

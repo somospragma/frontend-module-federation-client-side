@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var require: any;
 const packageJson = require('../../package.json');
@@ -12,4 +13,8 @@ export class AppComponent {
   title = 'Host';
   ngVersion = packageJson.dependencies['@angular/core'];
   primeNGVersion = packageJson.dependencies['primeng'];
+
+  constructor() {
+    (globalThis as any).router = inject(Router);
+  }
 }

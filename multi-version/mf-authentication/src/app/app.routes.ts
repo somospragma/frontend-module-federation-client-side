@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found.component';
 
 export const routes: Routes = [
   {
@@ -15,5 +16,9 @@ export const routes: Routes = [
     path: 'authentication/page-d',
     loadComponent: () =>
       import('./pages/page-d/page-d.component').then((m) => m.PageDComponent),
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];

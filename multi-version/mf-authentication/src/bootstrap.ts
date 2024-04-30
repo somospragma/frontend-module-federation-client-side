@@ -4,13 +4,14 @@ import { NgZone } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 import { createCustomElement } from '@angular/elements';
+import { RouterGlobalUtil } from './app/router-global.util';
 
 (async () => {
+  const gThis = globalThis as any;
   const app = await createApplication({
     providers: [
-      (globalThis as any).ngZone
-        ? { provide: NgZone, useValue: (globalThis as any).ngZone }
-        : [],
+      gThis.ngZone ? { provide: NgZone, useValue: gThis.ngZone } : [],
+      gThis.router ? { provide: RouterGlobalUtil, useValue: gThis.router } : [],
       provideRouter(routes),
     ],
   });

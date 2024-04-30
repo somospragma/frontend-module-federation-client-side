@@ -5,10 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
+import { RouterGlobalUtil } from './router-global.util';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, MatButtonModule],
+  providers: [
+    (globalThis as any).router
+      ? { provide: RouterGlobalUtil, useValue: (globalThis as any).router }
+      : [],
+  ],
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {}

@@ -11,7 +11,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-architects/microapp": "^1.0.0-beta.4",
     "@angular-architects/module-federation": "^15.0.3",
     "@angular/animations": "^15.2.0",
     "@angular/common": "^15.2.0",

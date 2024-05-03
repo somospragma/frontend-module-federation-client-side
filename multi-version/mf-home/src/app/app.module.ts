@@ -6,10 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
 import { RouterGlobalUtil } from './router-global.util';
+import { MicroAppRoutingModule } from '@angular-architects/microapp';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, MatButtonModule],
+  imports: [
+    BrowserModule,
+    MicroAppRoutingModule.forMicroApp({ name: 'home' }),
+    AppRoutingModule,
+    MatButtonModule,
+  ],
   providers: [
     (globalThis as any).router
       ? { provide: RouterGlobalUtil, useValue: (globalThis as any).router }

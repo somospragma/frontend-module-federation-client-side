@@ -16,6 +16,6 @@ export class AppComponent {
   materialVersion = packageJson.dependencies['@angular/material'];
 
   constructor(private router: Router) {
-    connectRouter(this.router, false);
+    // connectRouter(this.router, false);
   }
 }

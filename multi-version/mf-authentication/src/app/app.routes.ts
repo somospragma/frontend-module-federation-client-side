@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { NotFoundComponent } from './not-found.component';
+// import { NotFoundComponent } from 'micro-frontends-config-lib';
 
 export const routes: Routes = [
   {
@@ -17,8 +17,8 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/page-d/page-d.component').then((m) => m.PageDComponent),
   },
-  {
-    path: '**',
-    component: NotFoundComponent,
-  },
+  // {
+  //   path: '**',
+  //   component: NotFoundComponent,
+  // },
 ];

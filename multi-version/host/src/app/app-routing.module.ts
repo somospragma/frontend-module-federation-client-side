@@ -25,7 +25,7 @@ const routes: Routes = [
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
       remoteName: 'mf-authentication',
       exposedModule: './web-components',
-      elementName: 'mf-auth-root',
+      elementName: 'mf-authentication-root',
     } as WebComponentWrapperOptions,
   },
   {
@@ -38,6 +38,30 @@ const routes: Routes = [
       remoteName: 'mf-home',
       exposedModule: './web-components',
       elementName: 'mf-home-root',
+    } as WebComponentWrapperOptions,
+  },
+  {
+    matcher: startsWith('auth'),
+    pathMatch: 'prefix',
+    component: WebComponentWrapper,
+    data: {
+      type: 'module',
+      remoteEntry: 'http://localhost:4203/remoteEntry.js',
+      remoteName: 'mf-auth',
+      exposedModule: './web-components',
+      elementName: 'mf-auth-root',
+    } as WebComponentWrapperOptions,
+  },
+  {
+    matcher: startsWith('bills'),
+    pathMatch: 'prefix',
+    component: WebComponentWrapper,
+    data: {
+      type: 'module',
+      remoteEntry: 'http://localhost:4204/remoteEntry.js',
+      remoteName: 'mf-bills',
+      exposedModule: './web-components',
+      elementName: 'mf-bills-root',
     } as WebComponentWrapperOptions,
   },
 ];

@@ -10,5 +10,4 @@ if (environment.production) {
 
 bootstrap(AppModule, {
   production: environment.production,
-  appType: 'microfrontend',
 }).catch((err) => console.error(err));

@@ -1,0 +1,44 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./projects/ng_bds/dist",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": false,
+    "declaration": false,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "allowJs": false,
+    "paths": {
+      "@bancolombia/design-system-web/*": [
+        "projects/ng_bds/*"
+      ],
+      "@bancolombia/design-system-web": [
+        "dist/ng_bds/*"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "resolveJsonModule": true,
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "strictNullChecks": false,
+    "compilationMode": "partial",
+    "enableIvy": true,
+    "strictInputAccessModifiers": true
+  }
+}

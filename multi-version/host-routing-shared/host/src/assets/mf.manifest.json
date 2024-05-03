@@ -1,0 +1,5 @@
+{
+  "mf-authentication": "http://localhost:4201/remoteEntry.js",
+  "mf-home": "http://localhost:4202/remoteEntry.js",
+  "mf-auth": "http://localhost:4203/remoteEntry.js"
+}

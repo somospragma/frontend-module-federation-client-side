@@ -13,8 +13,4 @@ export class AppComponent {
   title = 'Host';
   ngVersion = packageJson.dependencies['@angular/core'];
   primeNGVersion = packageJson.dependencies['primeng'];
-
-  constructor() {
-    (globalThis as any).router = inject(Router);
-  }
 }

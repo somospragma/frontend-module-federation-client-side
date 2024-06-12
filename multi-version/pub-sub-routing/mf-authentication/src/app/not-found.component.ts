@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Location } from '@angular/common';
 import { MfNotification, RouterState } from './mf-notification.interface';
 import PubSub from 'pubsub-js';
-import { ROUTING_CONSTANTS } from 'routing.constants';
+import { ROUTING_CONSTANTS } from './routing.constants';
 
 @Component({
   selector: 'app-not-found',

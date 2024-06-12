@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { connectRouter } from './connect-router';
 import { MfNotification } from './mf-notification.interface';
-import { ROUTING_CONSTANTS } from 'routing.constants';
+import { ROUTING_CONSTANTS } from './routing.constants';
 
 declare var require: any;
 const packageJson = require('../../package.json');

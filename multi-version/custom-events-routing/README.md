@@ -19,7 +19,7 @@ uso de las siguientes utilidades:
 export class RoutingNotifier {
   static notify(hostNotification: HostNotification) {
     document.dispatchEvent(
-      new CustomEvent('notifyMf', {
+      new CustomEvent("notifyMf", {
         detail: hostNotification,
       })
     );
@@ -30,7 +30,7 @@ export class RoutingNotifier {
 export class RoutingNotifier {
   static notify(mfNotification: MfNotification) {
     document.dispatchEvent(
-      new CustomEvent('notifyHost', {
+      new CustomEvent("notifyHost", {
         detail: mfNotification,
       })
     );
@@ -67,7 +67,7 @@ Además de ello en el app.component de cada mf agregamos un listener para recibi
   }
 ```
 
-> Algo muy importante que la URL contenga el nombre dle micro para que solo realice la navegación en ese caso.
+> Algo muy importante que la URL contenga el nombre del micro para que solo realice la navegación en ese caso.
 
 De esta manera podemos navegar desde el host hacia una ruta o subruta de un microfrontend.
 

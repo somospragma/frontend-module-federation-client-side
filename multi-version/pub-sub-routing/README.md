@@ -10,14 +10,14 @@
 Analizando la problemática se propone usar la librería **pubsub-js** para comunicar el enrutamiento del host hacia los microfrontends y viceversa:
 
 ```typescript
-import PubSub from 'pubsub-js';
+import PubSub from "pubsub-js";
 
-const EVENT_NAME = 'FOO';
+const EVENT_NAME = "FOO";
 
 const mySubscriber = (msg, data) => console.log(msg, data);
 const token = PubSub.subscribe(EVENT_NAME, mySubscriber);
 
-PubSub.publish(EVENT_NAME, 'hello world!');
+PubSub.publish(EVENT_NAME, "hello world!");
 ```
 
 Más información en [PubSubJS - npm](https://www.npmjs.com/package/pubsub-js).
@@ -66,7 +66,7 @@ private subscribeToPubSubRoutingEvents() {
 }
 ```
 
-> Algo muy importante que la URL contenga el nombre dle micro para que solo realice la navegación en ese caso.
+> Algo muy importante que la URL contenga el nombre del micro para que solo realice la navegación en ese caso.
 
 De esta manera podemos navegar desde el host hacia una ruta o subruta de un microfrontend.
 
